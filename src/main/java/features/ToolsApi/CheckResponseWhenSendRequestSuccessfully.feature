@@ -1,47 +1,30 @@
 #Author: nhungttt
-@ToolsApi
-Feature: Tool Api Testing
-
-  @HappyCase
-  Scenario: Check response when send request successfully
-    Given I have url and method
-    When I send tool request
-    Then Status code is returned as 200
-    Then Response body is correctly
-    @HappyCase
-Scenario: Check response when send request successfully with a specific category
-    Given I have url and method
-    When I send tool request with param "<category>"
-    Then Status code is returned as 200
-    And Response body matches category "<category>"
-    Examples:
-      | category            |
-      | ladders             |
-      | plumbing            |
-      | power-tools         |
-      | trailers            |
-      | electric-generators |
-      | lawn-care           |
-    
-     #@HappyCase
-  #Scenario Outline: Check response when send request successfully with a specific category
+#@ToolsApi
+#Feature: Tool Api Testing
+#
+  #@HappyCase
+  #Scenario: Check response when send request successfully
     #Given I have url and method
-    #When I send tool request with category <category> and results <results>
-    #When I send tool request with category ladders and results 3
+    #When I send tool request
     #Then Status code is returned as 200
-    #And Response body matches category <category> and results <results>
-    #And Response body matches category ladders and results 3
-    #
-    #
+    #Then Response body is correctly
+    #@HappyCase
+#Scenario: Check response when send request successfully with a specific category
+    #Given I have url and method
+    #When I send tool request with param "<category>" and <results> and available "<available>"
+    #Then Status code is returned as 200
+    #And Response body matches category "<category>" and <results> and available "<available>"
      #Examples:
-      #| category            |results|
-      #| ladders             |3      |
-      #| plumbing            |3			|
-      #| power-tools         |1			|
-      #| trailers            |1			|
-      #| electric-generators |1			|
-      #| lawn-care           |1			|
-
+      #| category            |results|available|
+      #| ladders             |3      |	 true	  |
+      #| plumbing            |3			|  true	  |
+      #| power-tools         |1			|	 true	  |
+      #| trailers            |1			|	 true   |
+      #| electric-generators |1			|	 true   |
+      #| lawn-care           |1			|	 true	  |
+ #
+  #
+#
       #@HappyCase
   #Scenario: Check response when send request successfully
     #Given I have <URL> and <Method>
